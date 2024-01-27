@@ -11,3 +11,107 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.navvy {
+  font-size: 24px;
+  color: black;
+  display: inline-block;
+  margin:10px
+}
+
+.box {
+  border: 1px black solid;
+  display: inline-block;
+  width: 193px;
+  height: 40px;
+  margin: 5px;
+  font-size: 20px;
+  border: 2px black solid;
+  /* margin: 5px; */
+}
+
+.results {
+  border: 1px black solid;
+  width: 150px;
+  height: 100px;
+  margin: 5px;
+  background-color: rosybrown;
+  flex-basis:24%;
+}
+
+.container {
+  border: 1px black solid;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+input {
+  width: 200px;
+  margin:2px;
+  background: none;
+	color: inherit;
+	border: 2px black solid;
+	padding: 0;
+	font: inherit;
+	cursor: pointer;
+	outline: inherit;
+}
+
+.check {
+  width: 400px;
+  height: 50px;
+  margin:auto;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  background: none;
+	color: inherit;
+	border: 2px black solid;
+	padding: 0;
+	font: inherit;
+	cursor: pointer;
+	outline: inherit;
+  font-size: 36px;
+}
+
+span {
+  color: black;
+  font-size: 36px;
+}
+
+.spanny {
+  color: black;
+  font-size: 24px;
+}
+.inp {
+  width: 205px;
+  margin:2px;
+  background: none;
+	color: inherit;
+	border: 2px black solid;
+	padding: 0;
+	font: inherit;
+	cursor: pointer;
+	outline: inherit;
+}
+
+.submitButton {
+  width: 405px;
+  height: 50px;
+  margin:2px;
+  background: pink;
+	color: inherit;
+	border: 2px black solid;
+	padding: 0;
+	font: inherit;
+	cursor: pointer;
+	outline: inherit;
+}
+
+.logoutbtn {
+  background-color: pink;
+  position: absolute;
+  top:10px;
+  right:10px;
+  height: 50px;
+  width: 100px;
+}
