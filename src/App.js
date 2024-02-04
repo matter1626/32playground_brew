@@ -24,10 +24,15 @@ function App() {
   const login = (obj) => {
     console.log(obj);
     axios.post('http://localhost:4000/login',obj).then((res) => {
-        console.log(res.data)}
+        console.log('here',res.data)
+        if(res.data === 'cookie initialized'){
+          console.log('yay!')
+          setAuth(true);
+          setLoggedOut(false);
+        }
+      }
     )
-    setAuth(true);
-    setLoggedOut(false);
+
   }
 
   return (
