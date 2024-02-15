@@ -3,8 +3,6 @@ import Check from './check';
 
 function Generator() {
 
-
-
     useEffect(()=> {
         console.log('setting up first function')
         newQuestion()
@@ -27,6 +25,7 @@ function Generator() {
             dividend:dividend,
             quotient:quotient
         }
+        
         setQuestion(quest);
         setAns(quotient);
     }

@@ -7,6 +7,7 @@ import Cookies from 'universal-cookie';
 import Result from './components/result';
 import Protect from './components/protect';
 import { useState } from 'react';
+import AuthWrapper from './components/authWrapper';
 
 import axios from 'axios'
 
@@ -20,11 +21,11 @@ function App() {
 
   let [auth, setAuth] = useState(null);
   let [loggedOut,setLoggedOut] = useState(true)
+  let [test, setTest] = useState(null);
 
   const login = (obj) => {
     console.log(obj);
     axios.post('http://localhost:4000/login',obj).then((res) => {
-        console.log('here',res.data)
         if(res.data === 'cookie initialized'){
           console.log('yay!')
           setAuth(true);
@@ -32,21 +33,33 @@ function App() {
         }
       }
     )
+  }
 
+  const handleCheck = () => {
+    console.log("handle-check")
+    axios.post('http://localhost:4000/protected').then((res) => {
+    if (res.data === 'test'){
+      setTest('/test')
+    }})
   }
 
   return (
     <div className="App">
 
-        <NavLink
-          className='navvy' 
-          to='/test'> test </NavLink>
+        <AuthWrapper/>
+
+        {/* <NavLink
+          className='navvy'
+          to={test}
+          onClick={handleCheck}
+          > test </NavLink>
         
         <NavLink
           className='navvy'
-          to='/results'> result </NavLink>
+          to='/results'
+          > result </NavLink> */}
 
-      {loggedOut ? <Login logg={login}/>
+      {/* {loggedOut ? <Login logg={login}/>
           :
           <button
           className='logoutbtn'
@@ -54,9 +67,11 @@ function App() {
               setAuth(false);
               setLoggedOut(true)
               }}
-          >log-out</button>}
+          >log-out</button>} */}
 
-      <Routes>
+      {/* <Routes>
+
+
       
       <Route element={<Protect pro={auth}/>}>
 
@@ -68,7 +83,7 @@ function App() {
 
       </Route>
 
-      </Routes>
+      </Routes> */}
 
     </div>
   );
